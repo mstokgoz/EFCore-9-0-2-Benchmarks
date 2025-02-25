@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Commencis.EfCore.Presentation.Benchmarks.e_AsNoTracking_vs_Normal_v3-20250220-172830</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, macOS Sonoma 14.5 (23F79) [Darwin 23.5.0]
+Apple M2, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 9.0.200
+  [Host]     : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+  Job-FOQMBB : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code>IterationCount=10  WarmupCount=10  
+</code></pre>
+
+<table>
+<thead><tr><th>Method         </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Get_With_AsNoTracking</td><td>171.7 ms</td><td>5.59 ms</td><td>3.70 ms</td><td>14333.3333</td><td>5333.3333</td><td>2000.0000</td><td>103.69 MB</td>
+</tr><tr><td>Get_With_Tracking</td><td>172.8 ms</td><td>6.93 ms</td><td>4.58 ms</td><td>9666.6667</td><td>333.3333</td><td>-</td><td>78.67 MB</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Commencis.EfCore.Presentation.Benchmarks.c_GetAllColumns_vs_GetRestricted-20250219-203431</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, macOS Sonoma 14.5 (23F79) [Darwin 23.5.0]
+Apple M2, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 9.0.200
+  [Host]     : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+  Job-WUJCLY : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code>IterationCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method   </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Get_All_Columns</td><td>154.25 ms</td><td>15.01 ms</td><td>0.823 ms</td><td>9666.6667</td><td>333.3333</td><td>-</td><td>78.67 MB</td>
+</tr><tr><td>Get_Restricted</td><td>71.06 ms</td><td>14.79 ms</td><td>0.811 ms</td><td>2857.1429</td><td>1142.8571</td><td>428.5714</td><td>22.29 MB</td>
+</tr></tbody></table>
+</body>
+</html>

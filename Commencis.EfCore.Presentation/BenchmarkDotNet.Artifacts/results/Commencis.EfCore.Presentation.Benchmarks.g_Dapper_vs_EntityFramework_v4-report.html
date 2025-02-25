@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Commencis.EfCore.Presentation.Benchmarks.g_Dapper_vs_EntityFramework_v4-20250220-145550</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, macOS Sonoma 14.5 (23F79) [Darwin 23.5.0]
+Apple M2, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 9.0.200
+  [Host]     : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+  Job-LZDSTL : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code>IterationCount=10  WarmupCount=0  
+</code></pre>
+
+<table>
+<thead><tr><th>Method   </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Get_With_EfCore</td><td>3.644 ms</td><td>0.2640 ms</td><td>0.1571 ms</td><td>117.1875</td><td>23.4375</td><td>997.9 KB</td>
+</tr><tr><td>Get_With_Dapper</td><td>1.081 ms</td><td>0.1199 ms</td><td>0.0793 ms</td><td>13.6719</td><td>-</td><td>121.88 KB</td>
+</tr></tbody></table>
+</body>
+</html>

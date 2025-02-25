@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Commencis.EfCore.Presentation.Benchmarks.i_Eager_Loading_vs_Explicit_Loading-20250221-161825</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, macOS Sonoma 14.5 (23F79) [Darwin 23.5.0]
+Apple M2, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 9.0.200
+  [Host]     : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+  Job-CCLOAX : .NET 9.0.2 (9.0.225.6610), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code>IterationCount=5  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Method             </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Get_With_Eager_Loading</td><td>681.8 &mu;s</td><td>16.56 &mu;s</td><td>4.30 &mu;s</td><td>7.8125</td><td>-</td><td>70.9 KB</td>
+</tr><tr><td>Get_With_Explicit_Loading</td><td>3,622.7 &mu;s</td><td>389.85 &mu;s</td><td>60.33 &mu;s</td><td>31.2500</td><td>7.8125</td><td>301.77 KB</td>
+</tr></tbody></table>
+</body>
+</html>
